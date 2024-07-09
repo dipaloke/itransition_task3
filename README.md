@@ -1,5 +1,5 @@
 
-# TASK 3
+# TASK 3 -- rock-paper-scissors --
 
 - Using the language of your choice—from the Java/C#/PHP/JavaScript/TypeScript/Ruby/Python set, please—to write a script that implements a generalized rock-paper-scissors game (with the supports of arbitrary odd number of arbitrary combinations). Of course, it's recommended to use the language of your "specialization", but it's not required.
 
