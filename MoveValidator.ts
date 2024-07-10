@@ -1,6 +1,5 @@
 //class to validate rules and condition for game moves. In the first input moves must be odd and at least 3.
 
-
 export class MoveValidator {
     static validate(moves: string[]): void {
         if(moves.length < 3 || moves.length % 2 === 0) {
