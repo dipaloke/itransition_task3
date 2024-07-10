@@ -1,20 +1,8 @@
-/**
- * A table to show which moves win against which other moves. This table will be displayed when the user selects the "help" option. The table will help the user understand the game rules visually.
- *
- * add row to table logic:
- * For each move in the list, a new row is created.
- * The row starts with the move itself.
- * For each move, it compares against all other moves.
- * If the move is the same as the opponent's move, it adds 'Draw' to the row.
- * If the move beats the opponent's move (player wins), it adds 'Win' to the row.
- * If the move loses to the opponent's move (computer wins), it adds 'Lose' to the row.
- */
-
 import { GameRules } from "./GameRules";
 
 const Table = require("cli-table3");
 
-export class helpTableGenerator {
+export class HelpTableGenerator {
   private gameRules: GameRules;
   private moves: string[];
 
@@ -22,7 +10,6 @@ export class helpTableGenerator {
     this.gameRules = gameRules;
     this.moves = moves;
   }
-
 
   generateTable(): string {
     //create new table with column headers

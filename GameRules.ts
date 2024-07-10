@@ -1,12 +1,3 @@
-/**
- * Here we determine the winner of the game based on the moves made by the player and the computer.
- *
- * rules:
- * If the player's move index is equal to the computer's move index, it's a draw.
- * If the computer's move index is within the next half moves after the player's move index, the computer wins. Otherwise, the player wins.
- * Each move can beat half of the other moves and lose to the other half, maintaining fairness in the game.
- */
-
 export class GameRules {
   private moves: string[];
 

@@ -1,6 +1,52 @@
 
 # TASK 3 -- rock-paper-scissors --
 
+## Planning
+
+1. Validate the command-line arguments, where moves must be an odd number and at least 3.
+2. Generate a random key and computer move.
+3. Display HMAC of the computer move.
+4. Show the menu and get the user's move.
+5. Determine and display the winner.
+6. Display the help table if required.
+
+## Installation
+
+1. clone the repo
+2. cd into the task3 directory
+3. install packages with  ```npm i ```
+4. run the code with ``` npx ts-node index.ts rock paper scissors spock lizard ```
+5. follow the instructions provided in the cmd prompt
+
+## feature planning
+
+1. MoveValidation:
+   class to validate rules and condition for game moves. In the first input moves must be odd and at least 3.
+
+2. GameRules:
+  Here we determine the winner of the game based on the moves made by the player and the computer.
+
+  rules:
+  If the player's move index is equal to the computer's move index, it's a draw.
+  If the computer's move index is within the next half moves after the player's move index, the computer wins. Otherwise, the player wins.
+  Each move can beat half of the other moves and lose to the other half, maintaining fairness in the game.
+
+3. HMACGenerator:
+  HMAC ensures computer's move is cryptographically secure and cannot be tampered with. This step helps in proving that the computer did not change its move after the player made theirs, thus ensuring fairness.
+
+4. HelpTable:
+   A table to show which moves win against which other moves. This table will be displayed when the user selects the "help" option. The table will help the user understand the game rules visually.
+
+  add row to table logic:
+  For each move in the list, a new row is created.
+  The row starts with the move itself.
+  For each move, it compares against all other moves.
+  If the move is the same as the opponent's move, it adds 'Draw' to the row.
+  If the move beats the opponent's move (player wins), it adds 'Win' to the row.
+  If the move loses to the opponent's move (computer wins), it adds 'Lose' to the row.
+
+## Problem Specifications
+
 - Using the language of your choice—from the Java/C#/PHP/JavaScript/TypeScript/Ruby/Python set, please—to write a script that implements a generalized rock-paper-scissors game (with the supports of arbitrary odd number of arbitrary combinations). Of course, it's recommended to use the language of your "specialization", but it's not required.
 
 - When launched with command line parameters (arguments to the main or Main method in the case of Java or C#, sys.argv in Python, process.argv in Node.js, etc.) it accepts an odd number ≥ 3 non-repeating strings (if the arguments are incorrect, you must display a neat error message—what exactly is wrong and an example of how to do it right). All messages should be in English. These passed strings are moves (for example, Rock Paper Scissors or Rock Paper Scissors Lizard Spock or 1 2 3 4 5 6 7 8 9).
@@ -54,7 +100,7 @@ HMAC key: BD9BE48334BB9C5EC263953DA54727F707E95544739FCE7359C267E734E380A2
 
 - What is this task for? You need to understand hash function a little bit deeper, understand why they are for, add HMAC idea, learn to think how the exact sequence of steps can give you some kind of prove or contract, work with external libraries, touch some basics of OOP and a few other things.
 
-- DEADLINE for this and the rest of the tasks is the same—before the project start (you can check the schedule) -- 29.07.2024
+- DEADLINE for this and the rest of the tasks is the same—before the project start (you can check the schedule) -- 27.07.2024
 
 ## Table ex
 

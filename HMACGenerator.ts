@@ -1,7 +1,3 @@
-/**
- * HMAC ensures computer's move is cryptographically secure and cannot be tampered with. This step helps in proving that the computer did not change its move after the player made theirs, thus ensuring fairness.
- */
-
 import * as crypto from "crypto";
 
 export class HMACGenerator {
